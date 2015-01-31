@@ -1,0 +1,27 @@
+<head>
+  <title>Word by Word</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.2/flatly/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Word by Word</h1>
+    <p>
+      {{#each words}}
+        {{>word}}
+      {{/each}}
+    </p>
+    <p>Type a {{partofspeech}}</p>
+    <form class="new-word">
+      <input type="text" name="text" placeholder="Type a word." />
+    </form>
+    <button class="clear">Clear</button>
+  </div>
+</body>
+
+<template name="word">
+  <span>{{text}}</span>
+</template>
