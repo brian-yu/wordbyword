@@ -12,11 +12,11 @@ if (Meteor.isClient) {
     },
     noun: function () {
       var random = _.sample(Nouns.find().fetch());
-      return Nouns.find({_id: random && random._id});
+      return Nouns.find({_id: random && random._id}).text;
     },
     adjective: function () {
       var random = _.sample(Adjectives.find().fetch());
-      return Adjectives.find({_id: random && random._id});
+      return Adjectives.find({_id: random && random._id}).text;
     }
   });
   Template.body.events({

@@ -10,13 +10,14 @@
   <div class="container">
     <h1>Word by Word</h1>
     <span>{{> loginButtons}}</span>
-    <h4>Write a story about a {{adjective}} {{noun}}.</h4>
+    <h4>Write a story about a malfunctional doppleganger.</h4>
+    <br>
     <p>
       {{#each words}}
         {{>word}}
       {{/each}}
     </p>
-    <p>Type a {{partofspeech}}</p>
+   <!--  <p>Type a {{partofspeech}}</p> -->
     <form class="new-word">
       <input type="text" name="text" placeholder="Type a word." />
     </form>
